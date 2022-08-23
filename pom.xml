@@ -33,6 +33,11 @@
             <artifactId>upickle_2.13</artifactId>
             <version>2.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.11.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -65,23 +70,6 @@
                     <args>
                         <arg>-target:jvm-1.8</arg>
                     </args>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
-                <configuration>
-                    <archive>
-                        <addMavenDescriptor>false</addMavenDescriptor>
-                        <manifest>
-                            <mainClass>com.webtrends.harness.app.HarnessService</mainClass>
-                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                        </manifest>
-                        <manifestEntries>
-                            <Implementation-Build>${build}</Implementation-Build>
-                        </manifestEntries>
-                    </archive>
                 </configuration>
             </plugin>
         </plugins>
